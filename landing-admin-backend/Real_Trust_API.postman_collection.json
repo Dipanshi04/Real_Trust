@@ -1,0 +1,333 @@
+{
+  "info": {
+    "name": "Real Trust Real Estate API",
+    "description": "Complete API collection for Real Trust Real Estate Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Projects",
+      "item": [
+        {
+          "name": "GET All Projects",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/projects",
+              "host": ["{{base_url}}"],
+              "path": ["projects"]
+            }
+          }
+        },
+        {
+          "name": "GET Project by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/projects/507f1f77bcf86cd799439011",
+              "host": ["{{base_url}}"],
+              "path": ["projects", "507f1f77bcf86cd799439011"]
+            }
+          }
+        },
+        {
+          "name": "POST Create Project",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Luxury Villa in Downtown\",\n  \"description\": \"Beautiful 3-bedroom villa with modern amenities\",\n  \"image\": \"https://example.com/villa.jpg\",\n  \"location\": \"Downtown District\",\n  \"price\": 500000,\n  \"bedrooms\": 3,\n  \"bathrooms\": 2,\n  \"area\": 3500,\n  \"status\": \"available\",\n  \"features\": [\"Swimming Pool\", \"Garden\", \"Garage\"],\n  \"category\": \"Residential\",\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/projects",
+              "host": ["{{base_url}}"],
+              "path": ["projects"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Project",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"sold\",\n  \"price\": 525000\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/projects/507f1f77bcf86cd799439011",
+              "host": ["{{base_url}}"],
+              "path": ["projects", "507f1f77bcf86cd799439011"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Project",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/projects/507f1f77bcf86cd799439011",
+              "host": ["{{base_url}}"],
+              "path": ["projects", "507f1f77bcf86cd799439011"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Clients",
+      "item": [
+        {
+          "name": "GET All Clients",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/clients",
+              "host": ["{{base_url}}"],
+              "path": ["clients"]
+            }
+          }
+        },
+        {
+          "name": "GET Client by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/clients/607f1f77bcf86cd799439021",
+              "host": ["{{base_url}}"],
+              "path": ["clients", "607f1f77bcf86cd799439021"]
+            }
+          }
+        },
+        {
+          "name": "POST Create Client",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"role\": \"Business Owner\",\n  \"testimonial\": \"Excellent service! Found my dream home quickly.\",\n  \"rating\": 5,\n  \"image\": \"https://example.com/john.jpg\",\n  \"order\": 1,\n  \"isActive\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/clients",
+              "host": ["{{base_url}}"],
+              "path": ["clients"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Client",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"rating\": 4,\n  \"testimonial\": \"Updated testimonial text\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/clients/607f1f77bcf86cd799439021",
+              "host": ["{{base_url}}"],
+              "path": ["clients", "607f1f77bcf86cd799439021"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Client",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/clients/607f1f77bcf86cd799439021",
+              "host": ["{{base_url}}"],
+              "path": ["clients", "607f1f77bcf86cd799439021"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contacts",
+      "item": [
+        {
+          "name": "GET All Contacts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts?status=new",
+              "host": ["{{base_url}}"],
+              "path": ["contacts"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "new"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "GET Contact by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts/707f1f77bcf86cd799439031",
+              "host": ["{{base_url}}"],
+              "path": ["contacts", "707f1f77bcf86cd799439031"]
+            }
+          }
+        },
+        {
+          "name": "POST Submit Contact Form",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Emma Wilson\",\n  \"email\": \"emma@example.com\",\n  \"phone\": \"+1-555-987-6543\",\n  \"message\": \"Please contact me about the apartment listing in downtown area. I'm very interested!\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/contacts",
+              "host": ["{{base_url}}"],
+              "path": ["contacts"]
+            }
+          }
+        },
+        {
+          "name": "PUT Update Contact Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"responded\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/contacts/707f1f77bcf86cd799439031",
+              "host": ["{{base_url}}"],
+              "path": ["contacts", "707f1f77bcf86cd799439031"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Contact",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/contacts/707f1f77bcf86cd799439031",
+              "host": ["{{base_url}}"],
+              "path": ["contacts", "707f1f77bcf86cd799439031"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Subscribers",
+      "item": [
+        {
+          "name": "GET All Subscribers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/subscribers",
+              "host": ["{{base_url}}"],
+              "path": ["subscribers"]
+            }
+          }
+        },
+        {
+          "name": "GET Subscriber by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/subscribers/807f1f77bcf86cd799439041",
+              "host": ["{{base_url}}"],
+              "path": ["subscribers", "807f1f77bcf86cd799439041"]
+            }
+          }
+        },
+        {
+          "name": "POST Subscribe to Newsletter",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"newsubscriber@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/subscribers",
+              "host": ["{{base_url}}"],
+              "path": ["subscribers"]
+            }
+          }
+        },
+        {
+          "name": "DELETE Unsubscribe",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/subscribers/807f1f77bcf86cd799439041",
+              "host": ["{{base_url}}"],
+              "path": ["subscribers", "807f1f77bcf86cd799439041"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000/api",
+      "type": "string"
+    }
+  ]
+}
